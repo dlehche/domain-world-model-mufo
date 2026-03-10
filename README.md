@@ -83,7 +83,8 @@ Together, they support a function-first and governance-oriented system for human
 - `README.zh-CN.md` — Chinese overview
 - `docs/world-model-en.md` — main English article
 - `docs/world-model-zh.md` — main Chinese article
-- `docs/figures.md` — figures and diagram notes
+- `docs/figures.md` — figures and diagram English notes
+- docs/figures-zh.md` — figures and diagram  Chinese  notes
 
 ## Scope clarification
 
