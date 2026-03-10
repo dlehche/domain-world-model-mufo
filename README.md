@@ -1,74 +1,97 @@
-# domain-world-model-mufo
-MUFO is the MoveTips Unified Functional Ontology: a domain world model for human function, designed for structured representation, auditable reasoning, and safety-constrained decision support.
-# MUFO / MFLS
+# Domain World Model: MUFO  
+## MoveTips Unified Functional Ontology
 
-**MUFO** (MoveTips Unified Functional Ontology) is a unified ontology for representing human function as a computable, auditable, and safety-constrained reasoning domain.
+MUFO is a domain world model for **human function**. It is designed to represent functional structure, state, risk boundaries, and action-conditioned evolution in a form that is computable, auditable, and safe for high-stakes decision support.
 
-**MFLS** (MoveTips Functional Language System) is the operational language and execution framework built on top of MUFO for structured assessment, intervention description, risk control, record writing, and human–AI collaboration.
+## Why this repository exists
 
-## Why this project exists
+Most existing health and movement systems are strong at disease naming, protocol execution, and local task management, but weak at representing **human function** as a unified reasoning object.
 
-Modern healthcare and training systems are strong at disease naming, protocol execution, and local task management, but they remain fragmented when describing **human function** as a unified reasoning object.
+Pain, compensation, reduced tolerance, unstable control, and declining performance often appear before a clear diagnosis. In practice, these states are interpreted differently across rehabilitation, movement training, and health management, which makes reasoning difficult to standardize, reproduce, and govern.
 
-Pain, compensation, instability, reduced tolerance, and performance decline often appear before clear diagnosis. In practice, these problems are interpreted differently by different professionals, making safety boundaries inconsistent and reasoning difficult to reproduce.
+MUFO addresses that gap by building a structured world model for human function.
 
-This project addresses that gap by building:
+## Core position
 
-- a unified ontology for human function
-- a structured language system for professional expression and execution
-- a safety-constrained reasoning framework
-- an auditable record and replay mechanism
+MUFO is not a diagnosis engine.  
+MUFO is not a treatment guideline.  
+MUFO is not a black-box model that replaces professional judgment.
 
-## Core idea
+MUFO is a **knowledge-and-rules substrate** for the human functional world.
 
-In this project, human function is defined as:
+Its purpose is to support:
+
+- structured representation of human function
+- interpretable state inference
+- explicit safety boundaries
+- traceable reasoning artifacts
+- longitudinal writeback and replay
+- future human–AI collaboration under governance
+
+## Operational definition of human function
+
+In MUFO, human function is defined as:
 
 > The capacity to complete a task stably and efficiently under bounded physiological, biomechanical, and cognitive cost within explicit safety constraints.
 
-MUFO formalizes this through eight decision factors:
+This definition is task-based rather than disease-first, and bounded rather than idealized.
 
-- Task
-- Movement
-- Strategy
-- Capacity
-- System
-- Structure
-- Psychology
-- Behavior
+## Core reasoning spine
 
-The core decision spine is **Task–Capacity Matching (TCM)**:
+MUFO uses **Task–Capacity Matching (TCM)** as its central decision logic.
 
-- when task demand exceeds capacity supply, risk, pain, compensation, and instability increase
-- when capacity supply covers task demand, function becomes safer, more stable, and more improvable
+- When task demand exceeds available capacity, risk, compensation, pain, and instability tend to rise.
+- When capacity covers task demand under explicit constraints, function becomes safer, more stable, and more improvable.
 
-## Project structure
+This creates one shared reasoning frame across rehabilitation, training, and functional health management.
 
-- **MUFO**: ontology and reasoning backbone
-- **MFLS**: structured language and execution framework
-- **Workbench**: operational business entry for assessment, records, learning, and assisted execution
+## Three-layer architecture
 
-## Documentation
+### 1. Functional Cooperation Layer
+Defines the constraint topology of human function.
 
-- [Overview](docs/01-overview.md)
-- [MUFO Core](docs/02-mufo-core.md)
-- [MFLS Framework](docs/03-mfls-framework.md)
-- [Workbench](docs/04-workbench.md)
-- [Roadmap](docs/05-roadmap.md)
+This layer captures how functional units support, constrain, or compensate for one another. It freezes structure; it does not yet compute state.
 
-## Current status
+### 2. Human State Parsing Engine
+Maps observations into a functional state distribution.
 
-This repository currently focuses on:
+This layer turns structured observations into state, margin, bottleneck, and risk-window outputs with evidence trace and guardrail enforcement.
 
-- conceptual architecture
-- ontology boundaries
-- layered framework design
-- auditable reasoning structure
-- execution and record-carrying model
+### 3. Human Functional World Model
+Introduces time, action, and memory.
 
-Engineering implementation, governance tooling, payload standards, and task-specific protocol libraries are being expanded in parallel.
+This layer models how functional state evolves under intervention, load, and strategy changes, and writes outcomes back into persistent memory for recalibration.
 
-## Position
+## Strategic position in the world-model stack
 
-MUFO is **not** a clinical diagnosis system and **not** a replacement for professional judgment.
+MUFO is not aimed at molecular structure, physics simulation, or generic language modeling.
 
-It is a knowledge representation and reasoning framework for human function, designed to support structured interpretation, safety-constrained decision support, auditable outputs, and future human–AI collaboration.
+Its strategic center is **L4: Human Functional Dynamics** — the layer that links biological constraints below with task performance above and decision support beyond.
+
+This is where human function becomes computable, governable, and clinically usable.
+
+## Relation to MFLS
+
+MUFO is the ontology and reasoning substrate.  
+MFLS (MoveTips Functional Language System) is the execution language built on top of MUFO for assessment, intervention description, safety labeling, records, and audit-ready workflow.
+
+Together, they support a function-first and governance-oriented system for human decision support.
+
+## Repository structure
+
+- `README.md` — English overview
+- `README.zh-CN.md` — Chinese overview
+- `docs/world-model-en.md` — main English article
+- `docs/world-model-zh.md` — main Chinese article
+- `docs/figures.md` — figures and diagram notes
+
+## Scope clarification
+
+MUFO is intended as a knowledge representation and decision-support framework.
+
+It does not constitute:
+- diagnostic automation
+- autonomous treatment
+- unrestricted recommendation generation
+
+All downstream outputs are expected to operate under explicit safety guardrails, evidence trace, and human review.
